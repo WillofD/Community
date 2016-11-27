@@ -24,7 +24,7 @@ import android.widget.TextView;
 public class DrawerFragment extends Fragment implements View.OnClickListener {
 
     static DrawerLayout drawerLayout;
-    private TextView textView, textView1, textView2, textView3, textView4, textView5, textView6, textView7, textView8;
+    private TextView textView, textView1, textView2;
     ViewPager viewPager;
 
     public static DrawerFragment newInstance(DrawerLayout drawer) {
@@ -60,9 +60,7 @@ public class DrawerFragment extends Fragment implements View.OnClickListener {
         view.findViewById(R.id.textView2).startAnimation(animation1);
         view.findViewById(R.id.textView3).startAnimation(animation1);
         view.findViewById(R.id.textView4).startAnimation(animation1);
-        view.findViewById(R.id.textView5).startAnimation(animation1);
-        view.findViewById(R.id.textView6).startAnimation(animation1);
-        view.findViewById(R.id.textView7).startAnimation(animation1);
+
 
 
     }
@@ -80,19 +78,13 @@ public class DrawerFragment extends Fragment implements View.OnClickListener {
         textView = (TextView) view.findViewById(R.id.textView2);
         textView1 = (TextView) view.findViewById(R.id.textView3);
         textView2 = (TextView) view.findViewById(R.id.textView4);
-        textView3 = (TextView) view.findViewById(R.id.textView5);
-        textView4 = (TextView) view.findViewById(R.id.textView6);
-        textView5 = (TextView) view.findViewById(R.id.textView7);
-        textView6 = (TextView) view.findViewById(R.id.churchname);
 
 
-            textView.setText("Feeds");
-            textView1.setText("Church News");
-            textView2.setText("Church Group");
-            textView3.setText("Daily Read");
-            textView4.setText("Charity");
-            textView5.setText("About");
-            textView6.setText("Chickkamana Halli Church");
+
+            textView.setText("News");
+            textView1.setText("Members");
+            textView2.setText("About");
+
 
 
 
@@ -101,9 +93,7 @@ public class DrawerFragment extends Fragment implements View.OnClickListener {
         view.findViewById(R.id.textView2).setOnClickListener(this);
         view.findViewById(R.id.textView3).setOnClickListener(this);
         view.findViewById(R.id.textView4).setOnClickListener(this);
-        view.findViewById(R.id.textView5).setOnClickListener(this);
-        view.findViewById(R.id.textView6).setOnClickListener(this);
-        view.findViewById(R.id.textView7).setOnClickListener(this);
+
 
     }
 
@@ -125,15 +115,7 @@ public class DrawerFragment extends Fragment implements View.OnClickListener {
             case R.id.textView4:
                 viewPager.setCurrentItem(2);
                 break;
-            case R.id.textView5:
-                viewPager.setCurrentItem(3);
-                break;
-            case R.id.textView6:
-                viewPager.setCurrentItem(4);
-                break;
-            case R.id.textView7:
-                viewPager.setCurrentItem(5);
-                break;
+
 
         }
 

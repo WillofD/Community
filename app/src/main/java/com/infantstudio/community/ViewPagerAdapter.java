@@ -21,7 +21,7 @@ public class ViewPagerAdapter extends FragmentPagerAdapter {
             R.drawable.hum1,
             R.drawable.hum1
     };
-    private String tabTitles[] = new String[] { "Tab1", "Tab2","Tab3" };
+    private String tabTitles[] = new String[] { "News", "Members","About" };
 
 
 
@@ -34,44 +34,42 @@ public class ViewPagerAdapter extends FragmentPagerAdapter {
 
     @Override
     public Fragment getItem(int position) {
-//        Fragment fragment = null;
-//
-//        switch (position) {
-//
-//
-//            case 0:
-//                fragment = new DisplayContent();
-//                break;
-//            case 1:
-//                fragment = new DisplayContent();
-//                break;
-//            case 2:
-//                fragment = new DisplayContent();
-//                break;
-//            case 3:
-//                fragment = new DisplayContent();
-//                break;
-//            case 4:
-//                fragment = new DisplayContent();
-//                break;
-//            case 5:
-//                fragment = new DisplayContent();
-//                break;
-//
-//
-//
-//
-//        }
-//
-//        return fragment;
-        return PageFragment.newInstance(position + 1);
+        Fragment fragment = null;
+
+        switch (position) {
+
+
+            case 0:
+                fragment = new Fragment_Church_News();
+                break;
+            case 1:
+                fragment = new DisplayContent();
+                break;
+            case 2:
+                fragment = new DisplayContent();
+                break;
+            case 3:
+                fragment = new DisplayContent();
+                break;
+            case 4:
+                fragment = new DisplayContent();
+                break;
+            case 5:
+                fragment = new DisplayContent();
+                break;
+
+
+
+
+        }
+
+       return fragment;
+
     }
 
     @Override
     public int getCount() {
-        return 3
-
-                ;
+        return 3;
     }
 
 
