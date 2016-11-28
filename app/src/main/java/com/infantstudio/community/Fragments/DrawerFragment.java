@@ -1,4 +1,4 @@
-package com.infantstudio.community;
+package com.infantstudio.community.Fragments;
 
 
 import android.content.Intent;
@@ -15,7 +15,7 @@ import android.view.animation.Animation;
 import android.view.animation.AnimationUtils;
 import android.widget.TextView;
 
-
+import com.infantstudio.community.R;
 
 
 /**

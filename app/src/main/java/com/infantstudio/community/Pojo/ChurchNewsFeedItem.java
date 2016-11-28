@@ -1,4 +1,4 @@
-package com.infantstudio.community;
+package com.infantstudio.community.Pojo;
 
 /**
  * Created by Pavan on 10/10/2016.

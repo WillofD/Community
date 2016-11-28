@@ -2,7 +2,6 @@ package com.infantstudio.community;
 
 
 import android.os.Bundle;
-import android.provider.SyncStateContract;
 import android.support.design.widget.TabLayout;
 import android.support.v7.app.ActionBarDrawerToggle;
 import android.support.v4.view.ViewPager;
@@ -12,7 +11,8 @@ import android.support.v7.widget.Toolbar;
 import android.view.View;
 import android.widget.TextView;
 
-import com.infantstudio.community.R;
+import com.infantstudio.community.Adapaters.ViewPagerAdapter;
+import com.infantstudio.community.Fragments.DrawerFragment;
 
 public class MainActivity extends AppCompatActivity {
 

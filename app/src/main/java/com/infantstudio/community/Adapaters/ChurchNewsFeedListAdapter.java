@@ -1,4 +1,4 @@
-package com.infantstudio.community;
+package com.infantstudio.community.Adapaters;
 
 import android.app.Activity;
 import android.content.Context;
@@ -10,6 +10,10 @@ import android.widget.BaseAdapter;
 import android.widget.TextView;
 
 import com.android.volley.toolbox.ImageLoader;
+import com.infantstudio.community.AppController;
+import com.infantstudio.community.ChurchNewsFeedImageView;
+import com.infantstudio.community.Pojo.ChurchNewsFeedItem;
+import com.infantstudio.community.R;
 
 import java.util.List;
 

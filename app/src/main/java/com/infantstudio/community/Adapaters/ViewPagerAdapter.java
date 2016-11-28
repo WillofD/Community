@@ -1,7 +1,6 @@
-package com.infantstudio.community;
+package com.infantstudio.community.Adapaters;
 
 import android.app.Activity;
-import android.content.Context;
 import android.graphics.drawable.Drawable;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentManager;
@@ -11,6 +10,14 @@ import android.text.Spannable;
 import android.text.SpannableString;
 import android.text.style.ImageSpan;
 
+import com.infantstudio.community.DisplayContent;
+import com.infantstudio.community.Fragments.AboutFragment;
+import com.infantstudio.community.Fragments.Fragment_Church_News;
+import com.infantstudio.community.Fragments.CountryFragment;
+import com.infantstudio.community.Fragments.StateActivity;
+import com.infantstudio.community.R;
+
+import static com.infantstudio.community.Fixed.test1;
 
 public class ViewPagerAdapter extends FragmentPagerAdapter {
 
@@ -43,10 +50,13 @@ public class ViewPagerAdapter extends FragmentPagerAdapter {
                 fragment = new Fragment_Church_News();
                 break;
             case 1:
-                fragment = new DisplayContent();
+
+
+                    fragment = new CountryFragment();
+
                 break;
             case 2:
-                fragment = new DisplayContent();
+                fragment = new AboutFragment();
                 break;
             case 3:
                 fragment = new DisplayContent();

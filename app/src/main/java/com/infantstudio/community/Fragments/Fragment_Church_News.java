@@ -1,4 +1,4 @@
-package com.infantstudio.community;
+package com.infantstudio.community.Fragments;
 
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
@@ -13,6 +13,11 @@ import com.android.volley.Response;
 import com.android.volley.VolleyError;
 import com.android.volley.VolleyLog;
 import com.android.volley.toolbox.JsonObjectRequest;
+import com.infantstudio.community.AppController;
+import com.infantstudio.community.Pojo.ChurchNewsFeedItem;
+import com.infantstudio.community.Adapaters.ChurchNewsFeedListAdapter;
+import com.infantstudio.community.MainActivity;
+import com.infantstudio.community.R;
 
 import org.json.JSONArray;
 import org.json.JSONException;
