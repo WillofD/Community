@@ -17,10 +17,6 @@ public class DisplayContent extends Fragment {
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
         View rootView = inflater.inflate(R.layout.fragment_display_content, container, false);
-
-
-
-
         return  rootView;
     }
 

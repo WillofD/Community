@@ -3,6 +3,8 @@ package com.infantstudio.community.Adapaters;
 import android.app.Activity;
 import android.graphics.drawable.Drawable;
 import android.support.v4.app.Fragment;
+import android.support.v4.app.ListFragment;
+
 import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentPagerAdapter;
 import android.support.v4.content.ContextCompat;
@@ -13,11 +15,10 @@ import android.text.style.ImageSpan;
 import com.infantstudio.community.DisplayContent;
 import com.infantstudio.community.Fragments.AboutFragment;
 import com.infantstudio.community.Fragments.Fragment_Church_News;
-import com.infantstudio.community.Fragments.CountryFragment;
-import com.infantstudio.community.Fragments.StateActivity;
+import com.infantstudio.community.Fragments.ItemFragment;
+import com.infantstudio.community.Fragments.TestFragment;
 import com.infantstudio.community.R;
-
-import static com.infantstudio.community.Fixed.test1;
+import com.infantstudio.community.SearchFragmentPack.FragmentSearchMain;
 
 public class ViewPagerAdapter extends FragmentPagerAdapter {
 
@@ -26,9 +27,13 @@ public class ViewPagerAdapter extends FragmentPagerAdapter {
     private int[] imageResId = {
             R.drawable.hum1,
             R.drawable.hum1,
-            R.drawable.hum1
+            R.drawable.hum1,
+            R.drawable.hum1,
+            R.drawable.hum1,
+
+
     };
-    private String tabTitles[] = new String[] { "News", "Members","About" };
+    private String tabTitles[] = new String[] { "News", "Members","About",};
 
 
 
@@ -42,7 +47,7 @@ public class ViewPagerAdapter extends FragmentPagerAdapter {
     @Override
     public Fragment getItem(int position) {
         Fragment fragment = null;
-
+        ListFragment lf = null;
         switch (position) {
 
 
@@ -50,9 +55,7 @@ public class ViewPagerAdapter extends FragmentPagerAdapter {
                 fragment = new Fragment_Church_News();
                 break;
             case 1:
-
-
-                    fragment = new CountryFragment();
+                    fragment = new FragmentSearchMain();
 
                 break;
             case 2:
@@ -62,7 +65,8 @@ public class ViewPagerAdapter extends FragmentPagerAdapter {
                 fragment = new DisplayContent();
                 break;
             case 4:
-                fragment = new DisplayContent();
+                fragment = new ItemFragment();
+
                 break;
             case 5:
                 fragment = new DisplayContent();
@@ -75,6 +79,10 @@ public class ViewPagerAdapter extends FragmentPagerAdapter {
 
        return fragment;
 
+    }
+    android.app.ListFragment list(){
+           android.app.ListFragment lf = new TestFragment();
+        return lf;
     }
 
     @Override
@@ -122,5 +130,7 @@ return sb;
 //        }
 //
 //        return title;
+
     }
+
 }

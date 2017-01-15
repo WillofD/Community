@@ -1,6 +1,7 @@
 package com.infantstudio.community;
 
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.design.widget.TabLayout;
 import android.support.v7.app.ActionBarDrawerToggle;
@@ -8,13 +9,18 @@ import android.support.v4.view.ViewPager;
 import android.support.v4.widget.DrawerLayout;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
+import android.view.Menu;
+import android.view.MenuInflater;
+import android.view.MenuItem;
 import android.view.View;
 import android.widget.TextView;
 
 import com.infantstudio.community.Adapaters.ViewPagerAdapter;
 import com.infantstudio.community.Fragments.DrawerFragment;
+import com.infantstudio.community.Fragments.ItemFragment;
+import com.infantstudio.community.Fragments.dummy.DummyContent;
 
-public class MainActivity extends AppCompatActivity {
+public class MainActivity extends AppCompatActivity  implements ItemFragment.OnListFragmentInteractionListener{
 
     TabLayout tabLayout;
     ViewPager viewPager;
@@ -22,13 +28,15 @@ public class MainActivity extends AppCompatActivity {
     DrawerLayout drawerLayout;
     Toolbar toolbar;
     ActionBarDrawerToggle drawerToggle;
+    TextView adddata;
     private TextView title;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-
+        adddata= (TextView) findViewById(R.id.adddata);
 
 
         initialize1();
@@ -86,7 +94,7 @@ public class MainActivity extends AppCompatActivity {
         getSupportActionBar().setDisplayShowTitleEnabled(false);
         getSupportActionBar().setDisplayHomeAsUpEnabled(false);
         getSupportActionBar().setHomeButtonEnabled(false);
-        toolbar.setNavigationIcon(R.drawable.hum1);
+        toolbar.setNavigationIcon(R.drawable.blackdraw);
 
 
         drawerLayout = (DrawerLayout) findViewById(R.id.drawer_layout);
@@ -112,6 +120,7 @@ public class MainActivity extends AppCompatActivity {
             public void onDrawerOpened(View drawerView) {
                 super.onDrawerOpened(drawerView);
 
+
 //                drawerToggle.syncState();
             }
         };
@@ -120,4 +129,22 @@ public class MainActivity extends AppCompatActivity {
 
 
     }
+
+    @Override
+    public void onListFragmentInteraction(DummyContent.DummyItem item) {
+
+    }
+//    public boolean onCreateOptionsMenu(Menu menu) {
+//
+//        MenuInflater inflater = getMenuInflater();
+//        inflater.inflate(R.menu.main_menu, menu);
+//        return true;
+//    }
+//
+//    @Override
+//    public boolean onOptionsItemSelected(MenuItem item) {
+//        return super.onOptionsItemSelected(item);
+//
+//
+//    }
 }

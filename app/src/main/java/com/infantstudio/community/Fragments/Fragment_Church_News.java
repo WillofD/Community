@@ -32,7 +32,8 @@ import java.util.List;
 
 public class Fragment_Church_News extends Fragment {
 
-   String URL_FEED_CHURCH_NEWS = "http://52.89.46.93/singleChurchApp/admin/news_eng.json?random=888998";
+  String URL_FEED_CHURCH_NEWS = "http://52.89.46.93/singleChurchApp/admin/news_eng.json?random=888998";
+   // String URL_FEED_CHURCH_NEWS = "http://52.89.46.93/communityApp/?methodName=search.country&search_key=india";
     private static final String TAG = MainActivity.class.getSimpleName();
     private ListView listView;
     private ChurchNewsFeedListAdapter listAdapter;
@@ -105,7 +106,7 @@ public class Fragment_Church_News extends Fragment {
     }
     private void parseJsonFeed(JSONObject response) {
         try {
-            JSONArray feedArray = response.getJSONArray("news");
+            JSONArray feedArray = response.getJSONArray("news");//news
 
 
             for (int i = 0; i < feedArray.length(); i++) {
@@ -116,10 +117,10 @@ public class Fragment_Church_News extends Fragment {
                 item.setNews_title(feedObj.getString("news_title"));
 
                 // Image might be null sometimes
-                String image = feedObj.isNull("news_image") ? null : feedObj
+               String image = feedObj.isNull("news_image") ? null : feedObj
                         .getString("news_image");
                 item.setNews_image(image);
-                item.setNews_details(feedObj.getString("news_details"));
+                item.setNews_details(feedObj.getString("news_details"));//news_details
 //                item.setProfilePic(feedObj.getString("profilePic"));
 //                item.setTimeStamp(feedObj.getString("timeStamp"));
 

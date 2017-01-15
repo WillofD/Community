@@ -18,16 +18,16 @@
         android:fitsSystemWindows="true"
         tools:context="com.snyxius.mw3dk_patients.activities.Home">
 
+
         <android.support.design.widget.AppBarLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:background="#257e7e">
-
+            android:background="#FFC107">
             <android.support.v7.widget.Toolbar
                 android:id="@+id/toolbar"
                 android:layout_width="match_parent"
                 android:layout_height="?attr/actionBarSize"
-                android:background="#237373"
+                android:background="#FFC107"
                 app:layout_scrollFlags="scroll|enterAlways"
                 app:popupTheme="@style/AppTheme.PopupOverlay">
 
@@ -38,7 +38,7 @@
                     android:layout_height="wrap_content"
                     android:layout_gravity="center"
                     android:textAppearance="@android:style/TextAppearance.DeviceDefault.Medium"
-                    android:textColor="@android:color/white" />
+                    android:textColor="#212121" />
 
             </android.support.v7.widget.Toolbar>
 
@@ -46,13 +46,12 @@
 
             <android.support.design.widget.TabLayout
                 android:id="@+id/tabs"
-
                 android:layout_width="match_parent"
-                app:tabIndicatorColor="#42caca"
+                app:tabIndicatorColor="@color/white"
                 style="@style/MyCustomTabLayout"
-                app:tabSelectedTextColor="@color/white"
+                app:tabSelectedTextColor="#212121"
                 android:layout_height="wrap_content"
-                app:tabTextColor="@android:color/white"
+                app:tabTextColor="#757575"
                 app:tabGravity="fill"
                 app:tabMode="scrollable"
                 android:fillViewport="false" />

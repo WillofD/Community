@@ -24,7 +24,7 @@ import com.infantstudio.community.R;
 public class DrawerFragment extends Fragment implements View.OnClickListener {
 
     static DrawerLayout drawerLayout;
-    private TextView textView, textView1, textView2;
+    private TextView textView, textView1, textView2 ,adddata;
     ViewPager viewPager;
 
     public static DrawerFragment newInstance(DrawerLayout drawer) {
@@ -60,6 +60,8 @@ public class DrawerFragment extends Fragment implements View.OnClickListener {
         view.findViewById(R.id.textView2).startAnimation(animation1);
         view.findViewById(R.id.textView3).startAnimation(animation1);
         view.findViewById(R.id.textView4).startAnimation(animation1);
+        view.findViewById(R.id.adddata).startAnimation(animation1);
+
 
 
 
@@ -78,13 +80,15 @@ public class DrawerFragment extends Fragment implements View.OnClickListener {
         textView = (TextView) view.findViewById(R.id.textView2);
         textView1 = (TextView) view.findViewById(R.id.textView3);
         textView2 = (TextView) view.findViewById(R.id.textView4);
+        adddata = (TextView) view.findViewById(R.id.adddata);
 
 
 
-            textView.setText("News");
+
+        textView.setText("News");
             textView1.setText("Members");
             textView2.setText("About");
-
+            adddata.setText("Sign up");
 
 
 
@@ -93,6 +97,7 @@ public class DrawerFragment extends Fragment implements View.OnClickListener {
         view.findViewById(R.id.textView2).setOnClickListener(this);
         view.findViewById(R.id.textView3).setOnClickListener(this);
         view.findViewById(R.id.textView4).setOnClickListener(this);
+        view.findViewById(R.id.adddata).setOnClickListener(this);
 
 
     }
@@ -116,6 +121,10 @@ public class DrawerFragment extends Fragment implements View.OnClickListener {
                 viewPager.setCurrentItem(2);
                 break;
 
+            case R.id.adddata:
+                Intent i = new Intent("android.intent.action.ADDDATA");
+                startActivity(i);
+                break;
 
         }
 
