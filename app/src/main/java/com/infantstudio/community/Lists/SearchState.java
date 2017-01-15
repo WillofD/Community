@@ -1,6 +1,7 @@
 package com.infantstudio.community.Lists;
 
 import android.content.Context;
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.v4.view.MenuItemCompat;
 import android.support.v7.app.AppCompatActivity;
@@ -15,6 +16,7 @@ import android.widget.BaseAdapter;
 import android.widget.ListView;
 import android.widget.TextView;
 
+import com.infantstudio.community.Countrylist.FragmentCountryList;
 import com.infantstudio.community.R;
 
 import java.util.ArrayList;
@@ -83,8 +85,10 @@ public class SearchState extends AppCompatActivity {
                     TextView chidtext = (TextView) view.findViewById(R.id.title);
                      value = chidtext.getText().toString();
 
-
-
+                Intent opencountrylist = new Intent(SearchState.this,FragmentCountryList.class);
+//                opencountrylist.putExtra("StateValue",value);
+                startActivity(opencountrylist);
+                FragmentCountryList.StateLink(value);
             }
         });
 

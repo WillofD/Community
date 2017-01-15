@@ -294,12 +294,10 @@ public class SearchCountry extends AppCompatActivity {
                      value = chidtext.getText().toString();
 
                 Intent opencountrylist = new Intent(SearchCountry.this,FragmentCountryList.class);
-                opencountrylist.putExtra("value",value);
+//                opencountrylist.putExtra("CountryValue",value);
                 startActivity(opencountrylist);
 
-
-
-                     System.out.println("hi"+value);
+                FragmentCountryList.CountryLink(value);
 
 
             }

@@ -134,17 +134,22 @@ public class MainActivity extends AppCompatActivity  implements ItemFragment.OnL
     public void onListFragmentInteraction(DummyContent.DummyItem item) {
 
     }
-//    public boolean onCreateOptionsMenu(Menu menu) {
-//
-//        MenuInflater inflater = getMenuInflater();
-//        inflater.inflate(R.menu.main_menu, menu);
-//        return true;
-//    }
-//
-//    @Override
-//    public boolean onOptionsItemSelected(MenuItem item) {
-//        return super.onOptionsItemSelected(item);
-//
-//
-//    }
+    public boolean onCreateOptionsMenu(Menu menu) {
+
+        MenuInflater inflater = getMenuInflater();
+        inflater.inflate(R.menu.main_menu, menu);
+        return true;
+    }
+
+    public boolean onOptionsItemSelected(MenuItem item) {
+
+        switch (item.getItemId()){
+            case R.id.add_user:
+                startActivity(new Intent(MainActivity.this,Adddata.class));
+                break;
+        }
+        return super.onOptionsItemSelected(item);
+
+
+    }
 }

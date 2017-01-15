@@ -56,12 +56,12 @@ public class SearchCity extends AppCompatActivity {
                      value = chidtext.getText().toString();
 
                 Intent opencountrylist = new Intent(SearchCity.this,FragmentCountryList.class);
-                opencountrylist.putExtra("value",value);
+//                opencountrylist.putExtra("CityValue",value);
                 startActivity(opencountrylist);
 
+                 FragmentCountryList.CityLink(value);
 
 
-                     System.out.println("hi"+value);
 
 
             }

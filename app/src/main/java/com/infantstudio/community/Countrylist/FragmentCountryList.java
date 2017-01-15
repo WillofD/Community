@@ -1,5 +1,6 @@
 package com.infantstudio.community.Countrylist;
 
+import android.app.ProgressDialog;
 import android.content.Context;
 import android.content.Intent;
 import android.support.design.widget.Snackbar;
@@ -46,6 +47,8 @@ public class FragmentCountryList  extends AppCompatActivity {
     private List<FragmentCountryListFeedItem> feedItemschurchnews;
     public FrameLayout Countrylayout;
      public  JSONArray feedArray;
+    private ProgressDialog mProgressDialog;
+    public  String fCountryvalue,fStateValue,fCityValue,fCommunityValue,fProfestionValue;
     public FragmentCountryList() {
 
     }
@@ -56,10 +59,26 @@ public class FragmentCountryList  extends AppCompatActivity {
         setContentView(R.layout.activity_fragment_country_list);
 
         Countrylayout = (FrameLayout) findViewById(R.id.country_list_layout_id);
-        Intent intent = getIntent();
-        String fvalue = intent.getStringExtra("value");
+        Intent intent1 = getIntent();
+        mProgressDialog = new ProgressDialog(this);
 
-        URL_COUNTRY = "http://52.89.46.93/communityApp/?methodName=search.country&search_key="+fvalue;
+
+//         fCountryvalue = intent1.getStringExtra("CountryValue");
+//        fStateValue = intent1.getStringExtra("StateValue");
+//       fCityValue = intent1.getStringExtra("CityValue");
+//       fCommunityValue = intent1.getStringExtra("CommunityValue");
+//        fProfestionValue = intent1.getStringExtra("ProfestionValue");
+
+
+
+      // URL_COUNTRY = "http://52.89.46.93/communityApp/?methodName=search.country&search_key="+fvalue;
+//        CountryLink(fCountryvalue);
+//        StateLink(fStateValue);
+//        CityLink(fCityValue);
+//        CommunityLink(fCommunityValue);
+//        ProfestionLink(fProfestionValue);
+
+
 
         listView = (ListView) findViewById(R.id.list);
 
@@ -81,7 +100,6 @@ public class FragmentCountryList  extends AppCompatActivity {
                             //Toast.LENGTH_SHORT).show();
                     TextView c = (TextView) view.findViewById(R.id.news_title);
                     String a = c.toString().trim();
-                    System.out.println("om"+a);
 
                 }
             }
@@ -132,8 +150,39 @@ public class FragmentCountryList  extends AppCompatActivity {
 
 
     }
+
+    public static void CountryLink(String val)
+    {
+       URL_COUNTRY = null;
+        URL_COUNTRY = "http://52.89.46.93/communityApp/?methodName=search.country&search_key="+val;
+
+            System.out.println("hhhhhhhhhhhhhhhhhhhh"+val);
+    }
+    public static void StateLink(String val)
+    {
+        URL_COUNTRY = "http://52.89.46.93/communityApp/?methodName=search.state&search_key="+val;
+        System.out.println("sssssssssssssssssssss"+val);
+    }
+    public static void CityLink(String val)
+    {
+        URL_COUNTRY = "http://52.89.46.93/communityApp/?methodName=search.city&search_key="+val;
+    }
+
+    public static void CommunityLink(String val)
+    {
+        URL_COUNTRY = "http://52.89.46.93/communityApp/?methodName=search.community&search_key="+val;
+    }
+    public static   void ProfestionLink(String val)
+    {
+        URL_COUNTRY = "http://52.89.46.93/communityApp/?methodName=search.profession&search_key="+val;
+    }
+
+
     private void parseJsonFeed(JSONObject response) {
         try {
+            mProgressDialog.setProgressStyle(ProgressDialog.STYLE_SPINNER);
+            mProgressDialog.setMessage("Loding Data...");
+            mProgressDialog.show();
              feedArray = response.getJSONArray("responseMsg");//news
 
 
@@ -157,9 +206,10 @@ public class FragmentCountryList  extends AppCompatActivity {
 
             // notify data changes to list adapater
             listAdapter.notifyDataSetChanged();
-
+                mProgressDialog.dismiss();
             }else
             {
+                mProgressDialog.dismiss();
                 Snackbar snackbar = Snackbar
                         .make(Countrylayout, "Sorry there are no users in the country", Snackbar.LENGTH_LONG);
 

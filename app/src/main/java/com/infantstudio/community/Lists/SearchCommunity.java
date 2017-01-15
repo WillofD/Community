@@ -36,9 +36,9 @@ public class SearchCommunity extends AppCompatActivity {
         listView= (ListView) findViewById(R.id.listView);
         postArrayList=new ArrayList<>();
         postArrayList.add(new SearchCountryPojo("Community1"));
+        postArrayList.add(new SearchCountryPojo("test"));
         postArrayList.add(new SearchCountryPojo("Community2"));
         postArrayList.add(new SearchCountryPojo("Community3"));
-        postArrayList.add(new SearchCountryPojo("Community4"));
 
 
         myAppAdapter=new MyAppAdapter(postArrayList,SearchCommunity.this);
@@ -56,12 +56,12 @@ public class SearchCommunity extends AppCompatActivity {
                      value = chidtext.getText().toString();
 
                 Intent opencountrylist = new Intent(SearchCommunity.this,FragmentCountryList.class);
-                opencountrylist.putExtra("value",value);
+                opencountrylist.putExtra("CommunityValue",value);
                 startActivity(opencountrylist);
 
+                FragmentCountryList.CommunityLink(value);
 
 
-                     System.out.println("hi"+value);
 
 
             }

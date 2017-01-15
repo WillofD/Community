@@ -11,62 +11,55 @@
         android:name=".AppController"
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
+        android:hardwareAccelerated="false"
+        android:largeHeap="true"
         android:label="@string/app_name"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".MainActivity"
-
-
-            android:theme="@style/Theme.AppCompat.Light.NoActionBar"
-
-            >
+        <activity
+            android:name=".MainActivity"
+            android:theme="@style/Theme.AppCompat.Light.NoActionBar">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+        <activity android:name=".Adddata"
 
-
-        <activity android:name=".Adddata">
+            android:theme="@style/Base.Theme.AppCompat.Light.DarkActionBar"
+            >
             <intent-filter>
                 <action android:name="android.intent.action.ADDDATA" />
 
                 <category android:name="android.intent.category.DEFAULT" />
             </intent-filter>
         </activity>
-        <activity android:name=".Countrylist.FragmentCountryList"
-            android:theme="@style/Base.Theme.AppCompat.Light.DarkActionBar"
-
-            />
-        <activity android:name=".DisplayUser"></activity>
-     <activity android:name=".Lists.SearchCountry"
-         android:theme="@style/Base.Theme.AppCompat.Light.DarkActionBar"
-         android:label="Country"
-         ></activity>
-
-        <activity android:name=".Lists.SearchState"
+        <activity
+            android:name=".Countrylist.FragmentCountryList"
+            android:theme="@style/Base.Theme.AppCompat.Light.DarkActionBar" />
+        <activity android:name=".DisplayUser" />
+        <activity
+            android:name=".Lists.SearchCountry"
+            android:label="Country"
+            android:theme="@style/Base.Theme.AppCompat.Light.DarkActionBar" />
+        <activity
+            android:name=".Lists.SearchState"
             android:label="State"
-            android:theme="@style/Base.Theme.AppCompat.Light.DarkActionBar"
-
-            />
-        <activity android:name=".Lists.SearchCity"
+            android:theme="@style/Base.Theme.AppCompat.Light.DarkActionBar" />
+        <activity
+            android:name=".Lists.SearchCity"
             android:label="City"
-            android:theme="@style/Base.Theme.AppCompat.Light.DarkActionBar"
-
-            />
-        <activity android:name=".Lists.SearchProfestion"
-            android:theme="@style/Base.Theme.AppCompat.Light.DarkActionBar"
+            android:theme="@style/Base.Theme.AppCompat.Light.DarkActionBar" />
+        <activity
+            android:name=".Lists.SearchProfestion"
             android:label="Profession"
-
-            />
-        <activity android:name=".Lists.SearchCommunity"
-            android:theme="@style/Base.Theme.AppCompat.Light.DarkActionBar"
+            android:theme="@style/Base.Theme.AppCompat.Light.DarkActionBar" />
+        <activity
+            android:name=".Lists.SearchCommunity"
             android:label="Community"
-            />
-
-
+            android:theme="@style/Base.Theme.AppCompat.Light.DarkActionBar" />
+        <activity android:name=".SearchMain"></activity>
     </application>
-
 
 </manifest>

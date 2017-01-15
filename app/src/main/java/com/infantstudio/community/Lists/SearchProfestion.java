@@ -37,8 +37,8 @@ public class SearchProfestion extends AppCompatActivity {
         postArrayList=new ArrayList<>();
         postArrayList.add(new SearchCountryPojo("Audiologist"));
         postArrayList.add(new SearchCountryPojo("Audiologists"));
-        postArrayList.add(new SearchCountryPojo("Chartered Appraisers"));
-        postArrayList.add(new SearchCountryPojo("Dieticians"));
+        postArrayList.add(new SearchCountryPojo("test"));
+        postArrayList.add(new SearchCountryPojo("Software"));
 
 
         myAppAdapter=new MyAppAdapter(postArrayList,SearchProfestion.this);
@@ -56,12 +56,13 @@ public class SearchProfestion extends AppCompatActivity {
                      value = chidtext.getText().toString();
 
                 Intent opencountrylist = new Intent(SearchProfestion.this,FragmentCountryList.class);
-                opencountrylist.putExtra("value",value);
+//                opencountrylist.putExtra("ProfestionValue",value);
                 startActivity(opencountrylist);
 
+                FragmentCountryList.ProfestionLink(value);
 
 
-                     System.out.println("hi"+value);
+
 
 
             }

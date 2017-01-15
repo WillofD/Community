@@ -18,7 +18,8 @@ import com.infantstudio.community.Fragments.Fragment_Church_News;
 import com.infantstudio.community.Fragments.ItemFragment;
 import com.infantstudio.community.Fragments.TestFragment;
 import com.infantstudio.community.R;
-import com.infantstudio.community.SearchFragmentPack.FragmentSearchMain;
+
+import com.infantstudio.community.SearchMain;
 
 public class ViewPagerAdapter extends FragmentPagerAdapter {
 
@@ -55,7 +56,7 @@ public class ViewPagerAdapter extends FragmentPagerAdapter {
                 fragment = new Fragment_Church_News();
                 break;
             case 1:
-                    fragment = new FragmentSearchMain();
+                    fragment = new SearchMain();//FragmentSearchMain
 
                 break;
             case 2:
