@@ -60,6 +60,10 @@
             android:label="Community"
             android:theme="@style/Base.Theme.AppCompat.Light.DarkActionBar" />
         <activity android:name=".SearchMain"></activity>
+        <activity android:name=".Countrylist.FragmentStateList"
+
+            android:theme="@style/Base.Theme.AppCompat.Light.DarkActionBar" />
+            />
     </application>
 
 </manifest>

@@ -17,6 +17,7 @@ import android.widget.ListView;
 import android.widget.TextView;
 
 import com.infantstudio.community.Countrylist.FragmentCountryList;
+import com.infantstudio.community.Countrylist.FragmentStateList;
 import com.infantstudio.community.R;
 
 import java.util.ArrayList;
@@ -37,24 +38,24 @@ public class SearchState extends AppCompatActivity {
 
 
         postArrayList=new ArrayList<>();
-        postArrayList.add(new SearchStatePojo("Andhra Pradesh"));
-        postArrayList.add(new SearchStatePojo("Arunachal Pradesh"));
+        postArrayList.add(new SearchStatePojo("AndhraPradesh"));
+        postArrayList.add(new SearchStatePojo("ArunachalPradesh"));
         postArrayList.add(new SearchStatePojo("Assam"));
         postArrayList.add(new SearchStatePojo("Bihar"));
         postArrayList.add(new SearchStatePojo("Chhattisgarh"));
         postArrayList.add(new SearchStatePojo("Chandigarh"));
-        postArrayList.add(new SearchStatePojo("Dadra and Nagar Haveli"));
-        postArrayList.add(new SearchStatePojo("Daman and Diu"));
+        postArrayList.add(new SearchStatePojo("DadraandNagarHaveli"));
+        postArrayList.add(new SearchStatePojo("DamanandDiu"));
         postArrayList.add(new SearchStatePojo("Delhi"));
         postArrayList.add(new SearchStatePojo("Goa"));
         postArrayList.add(new SearchStatePojo("Gujarat"));
         postArrayList.add(new SearchStatePojo("Haryana"));
-        postArrayList.add(new SearchStatePojo("Himachal Pradesh"));
-        postArrayList.add(new SearchStatePojo("Jammu and Kashmir"));
+        postArrayList.add(new SearchStatePojo("HimachalPradesh"));
+        postArrayList.add(new SearchStatePojo("JammuandKashmir"));
         postArrayList.add(new SearchStatePojo("Jharkhand"));
         postArrayList.add(new SearchStatePojo("Karnataka"));
         postArrayList.add(new SearchStatePojo("Kerala"));
-        postArrayList.add(new SearchStatePojo("Madhya Pradesh"));
+        postArrayList.add(new SearchStatePojo("MadhyaPradesh"));
         postArrayList.add(new SearchStatePojo("Maharashtra"));
         postArrayList.add(new SearchStatePojo("Manipur"));
         postArrayList.add(new SearchStatePojo("Meghalaya"));
@@ -64,11 +65,12 @@ public class SearchState extends AppCompatActivity {
         postArrayList.add(new SearchStatePojo("Punjab"));
         postArrayList.add(new SearchStatePojo("Pondicherry"));
         postArrayList.add(new SearchStatePojo("Rajasthan"));
-        postArrayList.add(new SearchStatePojo("Tamil Nadu"));
+        postArrayList.add(new SearchStatePojo("TamilNadu"));
         postArrayList.add(new SearchStatePojo("Tripura"));
-        postArrayList.add(new SearchStatePojo("Uttar Pradesh"));
+        postArrayList.add(new SearchStatePojo("UttarPradesh"));
         postArrayList.add(new SearchStatePojo("Uttarakhand"));
-        postArrayList.add(new SearchStatePojo("West Bengal"));
+        postArrayList.add(new SearchStatePojo("WestBengal"));
+
 
 
         myAppAdapter=new MyAppAdapter(postArrayList,SearchState.this);
@@ -85,10 +87,11 @@ public class SearchState extends AppCompatActivity {
                     TextView chidtext = (TextView) view.findViewById(R.id.title);
                      value = chidtext.getText().toString();
 
-                Intent opencountrylist = new Intent(SearchState.this,FragmentCountryList.class);
+                Intent openstatelist = new Intent(SearchState.this,FragmentStateList.class);
 //                opencountrylist.putExtra("StateValue",value);
-                startActivity(opencountrylist);
-                FragmentCountryList.StateLink(value);
+                startActivity(openstatelist);
+                FragmentStateList.StateLink(value);
+
             }
         });
 
