@@ -54,12 +54,11 @@ public class SearchCity extends AppCompatActivity {
 //                            Toast.LENGTH_LONG).show();
                     TextView chidtext = (TextView) view.findViewById(R.id.title);
                      value = chidtext.getText().toString();
-
+                FragmentCountryList.CityLink(value);
                 Intent opencountrylist = new Intent(SearchCity.this,FragmentCountryList.class);
 //                opencountrylist.putExtra("CityValue",value);
                 startActivity(opencountrylist);
 
-                 FragmentCountryList.CityLink(value);
 
 
 

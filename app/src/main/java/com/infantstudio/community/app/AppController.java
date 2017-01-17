@@ -1,4 +1,4 @@
-package com.infantstudio.community;
+package com.infantstudio.community.app;
 
 import android.app.Application;
 import android.text.TextUtils;
@@ -7,7 +7,7 @@ import com.android.volley.Request;
 import com.android.volley.RequestQueue;
 import com.android.volley.toolbox.ImageLoader;
 import com.android.volley.toolbox.Volley;
-
+import com.infantstudio.community.LruBitmapCache;
 
 
 public class AppController extends Application {

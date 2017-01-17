@@ -293,12 +293,12 @@ public class SearchCountry extends AppCompatActivity {
 //                            Toast.LENGTH_LONG).show();
                     TextView chidtext = (TextView) view.findViewById(R.id.title);
                      value = chidtext.getText().toString();
-
+                FragmentCountryList.CountryLink(value);
                 Intent opencountrylist = new Intent(SearchCountry.this,FragmentCountryList.class);
 //                opencountrylist.putExtra("CountryValue",value);
                 startActivity(opencountrylist);
 
-                FragmentCountryList.CountryLink(value);
+
 
 
             }

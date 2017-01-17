@@ -54,12 +54,12 @@ public class SearchCommunity extends AppCompatActivity {
 //                            Toast.LENGTH_LONG).show();
                     TextView chidtext = (TextView) view.findViewById(R.id.title);
                      value = chidtext.getText().toString();
-
+                FragmentCountryList.CommunityLink(value);
                 Intent opencountrylist = new Intent(SearchCommunity.this,FragmentCountryList.class);
                 opencountrylist.putExtra("CommunityValue",value);
                 startActivity(opencountrylist);
 
-                FragmentCountryList.CommunityLink(value);
+
 
 
 

@@ -54,12 +54,12 @@ public class SearchProfestion extends AppCompatActivity {
 //                            Toast.LENGTH_LONG).show();
                     TextView chidtext = (TextView) view.findViewById(R.id.title);
                      value = chidtext.getText().toString();
-
+                FragmentCountryList.ProfestionLink(value);
                 Intent opencountrylist = new Intent(SearchProfestion.this,FragmentCountryList.class);
 //                opencountrylist.putExtra("ProfestionValue",value);
                 startActivity(opencountrylist);
 
-                FragmentCountryList.ProfestionLink(value);
+
 
 
 

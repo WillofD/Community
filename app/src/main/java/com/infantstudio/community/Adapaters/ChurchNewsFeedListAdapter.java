@@ -10,7 +10,7 @@ import android.widget.BaseAdapter;
 import android.widget.TextView;
 
 import com.android.volley.toolbox.ImageLoader;
-import com.infantstudio.community.AppController;
+import com.infantstudio.community.app.AppController;
 import com.infantstudio.community.ChurchNewsFeedImageView;
 import com.infantstudio.community.Pojo.ChurchNewsFeedItem;
 import com.infantstudio.community.R;

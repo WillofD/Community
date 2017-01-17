@@ -17,7 +17,6 @@ import android.widget.ListView;
 import android.widget.TextView;
 
 import com.infantstudio.community.Countrylist.FragmentCountryList;
-import com.infantstudio.community.Countrylist.FragmentStateList;
 import com.infantstudio.community.R;
 
 import java.util.ArrayList;
@@ -86,11 +85,11 @@ public class SearchState extends AppCompatActivity {
 //                            Toast.LENGTH_LONG).show();
                     TextView chidtext = (TextView) view.findViewById(R.id.title);
                      value = chidtext.getText().toString();
-
-                Intent openstatelist = new Intent(SearchState.this,FragmentStateList.class);
+                FragmentCountryList.StateLink(value);
+                Intent openstatelist = new Intent(SearchState.this,FragmentCountryList.class);
 //                opencountrylist.putExtra("StateValue",value);
                 startActivity(openstatelist);
-                FragmentStateList.StateLink(value);
+
 
             }
         });

@@ -8,7 +8,7 @@
     <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
 
     <application
-        android:name=".AppController"
+        android:name=".app.AppController"
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
         android:hardwareAccelerated="false"
@@ -59,11 +59,9 @@
             android:name=".Lists.SearchCommunity"
             android:label="Community"
             android:theme="@style/Base.Theme.AppCompat.Light.DarkActionBar" />
-        <activity android:name=".SearchMain"></activity>
-        <activity android:name=".Countrylist.FragmentStateList"
-
-            android:theme="@style/Base.Theme.AppCompat.Light.DarkActionBar" />
-            />
+        <activity android:name=".SearchMain"></activity><![CDATA[
+        />
+    ]]>
     </application>
 
 </manifest>

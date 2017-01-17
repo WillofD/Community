@@ -2,7 +2,7 @@ package com.infantstudio.community.Countrylist;
 
 import android.app.Activity;
 import android.content.Context;
-import android.text.TextUtils;
+import android.graphics.Color;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -10,7 +10,7 @@ import android.widget.BaseAdapter;
 import android.widget.TextView;
 
 import com.android.volley.toolbox.ImageLoader;
-import com.infantstudio.community.AppController;
+import com.infantstudio.community.app.AppController;
 import com.infantstudio.community.ChurchNewsFeedImageView;
 
 import com.infantstudio.community.R;
@@ -25,9 +25,12 @@ public class FragmentCountryListAdapater extends BaseAdapter {
     private List<FragmentCountryListFeedItem> churhcnewsfeedItems;
     ImageLoader imageLoader = AppController.getInstance().getImageLoader();
 
+    private String[] bgColors;
     public FragmentCountryListAdapater(Activity activity, List<FragmentCountryListFeedItem> feedItems) {
         this.activity = activity;
         this.churhcnewsfeedItems = feedItems;
+        bgColors = activity.getApplicationContext().getResources().getStringArray(R.array.movie_serial_bg);
+
     }
 
     @Override
@@ -62,6 +65,7 @@ public class FragmentCountryListAdapater extends BaseAdapter {
 //                .findViewById(R.id.timestamp);
 //        TextView newdetails = (TextView) convertView
 //                .findViewById(R.id.news_details);
+        String color = bgColors[position % bgColors.length];
 
 
         ChurchNewsFeedImageView feedImageView = (ChurchNewsFeedImageView) convertView
