@@ -41,7 +41,7 @@ public class MainActivity extends AppCompatActivity  implements ItemFragment.OnL
 
         initialize1();
 //        FloatingActionButton fab = (FloatingActionButton) findViewById(R.id.fab);
-//        fab.setOnClickListener(new View.OnClickListener() {
+//        fab.setOnClickListener(newlogo View.OnClickListener() {
 //            @Override
 //            public void onClick(View view) {
 //                Snackbar.make(view, "Replace with your own action", Snackbar.LENGTH_LONG)
@@ -101,7 +101,7 @@ public class MainActivity extends AppCompatActivity  implements ItemFragment.OnL
 
 
 //        getSupportFragmentManager().beginTransaction()
-//                .add(R.id.navigation_view, new DrawerFragment().newInstance(drawerLayout), Constants.DrawerFragment)
+//                .add(R.id.navigation_view, newlogo DrawerFragment().newInstance(drawerLayout), Constants.DrawerFragment)
 //                .commit();
         getSupportFragmentManager().beginTransaction()
                 .add(R.id.navigation_view, new DrawerFragment().newInstance(drawerLayout), "text")

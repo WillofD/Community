@@ -70,7 +70,7 @@ public class SearchMain extends Fragment implements View.OnClickListener {
             case R.id.logo6:
 
 
-              //  startActivity(new Intent(getActivity(),Adddata.class));
+              //  startActivity(newlogo Intent(getActivity(),Adddata.class));
                 break;
         }
     }

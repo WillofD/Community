@@ -74,13 +74,15 @@ public class FragmentCountryList  extends AppCompatActivity implements SwipeRefr
         listView.setAdapter(listAdapter);
 
 
+
+
         swipeRefreshLayout.setOnRefreshListener(this);
 
         swipeRefreshLayout.post(new Runnable() {
                                     @Override
                                     public void run() {
                                         swipeRefreshLayout.setRefreshing(true);
-
+                                        feedItemschurchnews.clear();
                                         fetchMovies();
                                     }
                                 }
@@ -194,12 +196,13 @@ public class FragmentCountryList  extends AppCompatActivity implements SwipeRefr
 
     @Override
     public void onRefresh() {
-
+        feedItemschurchnews.clear();
         fetchMovies();
     }
 
 
     public void fetchMovies(){
+
         deleteCache(this);
         swipeRefreshLayout.setRefreshing(true);
         Cache cache = AppController.getInstance().getRequestQueue().getCache();

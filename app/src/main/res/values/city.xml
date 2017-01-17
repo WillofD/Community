@@ -1,0 +1,14 @@
+<resources>
+
+
+    <string-array name="city">
+
+        <item>Bangalore</item>
+        <item>Mysore</item>
+        <item>Dharwad</item>
+        <item>Hubali</item>
+
+
+
+    </string-array>
+</resources>

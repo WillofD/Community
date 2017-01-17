@@ -46,7 +46,7 @@ public class CountryDataAdapter extends RecyclerView.Adapter<CountryDataAdapter.
 
     @Override
     public CountryDataAdapter.ViewHolder onCreateViewHolder(ViewGroup viewGroup, int i) {
-// create a new view
+// create a newlogo view
         View itemLayoutView = LayoutInflater.from(viewGroup.getContext()).inflate(
                 R.layout.country_card_view, null);
 
@@ -94,7 +94,7 @@ public class CountryDataAdapter extends RecyclerView.Adapter<CountryDataAdapter.
                     Fragment frg = null;
                     frg = new StateActivity();
 
-//                    Intent intent = new Intent(v.getContext(), SecondActivity.class);
+//                    Intent intent = newlogo Intent(v.getContext(), SecondActivity.class);
 //                    v.getContext().startActivity(intent);
 //                    Toast.makeText(v.getContext(), "os version is: " + feed.getTitle(), Toast.LENGTH_SHORT).show();
 

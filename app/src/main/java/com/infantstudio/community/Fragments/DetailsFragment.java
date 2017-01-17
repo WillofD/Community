@@ -96,7 +96,7 @@ public class DetailsFragment extends Fragment{
         super.onDetach();
     }
 
-//    private View.OnClickListener cancel_button_click_listener = new View.OnClickListener() {
+//    private View.OnClickListener cancel_button_click_listener = newlogo View.OnClickListener() {
 //        public void onClick(View v) {
 //            pwindocountry.dismiss();
 //

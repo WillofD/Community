@@ -28,7 +28,7 @@ public class StateDataAdapter extends RecyclerView.Adapter<StateDataAdapter.View
 
     @Override
     public StateDataAdapter.ViewHolder onCreateViewHolder(ViewGroup viewGroup, int i) {
-// create a new view
+// create a newlogo view
         View itemLayoutView = LayoutInflater.from(viewGroup.getContext()).inflate(
                 R.layout.state_card_view, null);
 
@@ -73,7 +73,7 @@ public class StateDataAdapter extends RecyclerView.Adapter<StateDataAdapter.View
                 @Override
                 public void onClick(View v) {
 
-//                    Intent intent = new Intent(v.getContext(), SecondActivity.class);
+//                    Intent intent = newlogo Intent(v.getContext(), SecondActivity.class);
 //                    v.getContext().startActivity(intent);
 //                    Toast.makeText(v.getContext(), "os version is: " + feed.getTitle(), Toast.LENGTH_SHORT).show();
 

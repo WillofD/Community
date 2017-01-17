@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <declare-styleable name="SearchableSpinnerCountry">
+        <attr name="hintTextCountry" format="string"/>
+    </declare-styleable>
+    <declare-styleable name="SearchableSpinnerState">
+        <attr name="hintTextState" format="string"/>
+    </declare-styleable>
+    <declare-styleable name="SearchableSpinnerCity">
+        <attr name="hintTextCity" format="string"/>
+    </declare-styleable>
+    <declare-styleable name="SearchableSpinnerProfestion">
+        <attr name="hintTextProfestion" format="string"/>
+    </declare-styleable>
+
+</resources>

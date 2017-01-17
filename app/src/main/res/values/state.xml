@@ -1,0 +1,43 @@
+<resources>
+
+
+    <string-array name="state">
+        <item>AndhraPradesh</item>
+        <item>ArunachalPradesh</item>
+        <item>Assam</item>
+        <item>Bihar</item>
+        <item>Chhattisgarh</item>
+        <item>Chandigarh</item>
+        <item>DadraandNagarHaveli</item>
+        <item>DamanandDiu</item>
+        <item>Delhi</item>
+        <item>Goa</item>
+        <item>Gujarat</item>
+        <item>Haryana</item>
+        <item>HimachalPradesh</item>
+        <item>JammuandKashmir</item>
+        <item>Jharkhand</item>
+        <item>Karnataka</item>
+        <item>Kerala</item>
+        <item>MadhyaPradesh</item>
+        <item>Maharashtra</item>
+        <item>Manipur</item>
+        <item>Meghalaya</item>
+        <item>Mizoram</item>
+        <item>Nagaland</item>
+        <item>Orissa</item>
+        <item>Punjab</item>
+        <item>Pondicherry</item>
+        <item>Rajasthan</item>
+        <item>TamilNadu</item>
+        <item>Tripura</item>
+        <item>UttarPradesh</item>
+        <item>Uttarakhand</item>
+        <item>WestBengal</item>
+
+
+
+
+
+    </string-array>
+</resources>

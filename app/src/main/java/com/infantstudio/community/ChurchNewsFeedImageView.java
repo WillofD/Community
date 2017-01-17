@@ -150,7 +150,7 @@ public class ChurchNewsFeedImageView extends ImageView {
         }
 
         // The pre-existing content of this view didn't match the current URL.
-        // Load the new image
+        // Load the newlogo image
         // from the network.
         ImageLoader.ImageContainer newContainer = mImageLoader.get(mUrl,
                 new ImageLoader.ImageListener() {
@@ -204,7 +204,7 @@ public class ChurchNewsFeedImageView extends ImageView {
                     }
                 });
 
-        // update the ImageContainer to be the new bitmap container.
+        // update the ImageContainer to be the newlogo bitmap container.
         mImageContainer = newContainer;
 
     }

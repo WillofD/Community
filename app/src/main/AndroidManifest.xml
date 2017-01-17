@@ -27,7 +27,7 @@
         </activity>
         <activity android:name=".Adddata"
 
-            android:theme="@style/Base.Theme.AppCompat.Light.DarkActionBar"
+
             >
             <intent-filter>
                 <action android:name="android.intent.action.ADDDATA" />

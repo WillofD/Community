@@ -1,0 +1,182 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="@color/bg_register"
+
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:paddingLeft="20dp"
+        android:layout_marginTop="20dp"
+        android:paddingRight="20dp" >
+
+
+        <ImageButton
+            android:layout_width="120dp"
+            android:layout_height="120dp"
+            android:src="@drawable/newlogo"
+            android:background="@null"
+            android:layout_marginBottom="10dp"
+            android:scaleType="centerCrop"
+            android:layout_gravity="center"
+            android:id="@+id/imageView"
+            />
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Upload Image"
+            android:background="#ea4c88"
+            android:padding="10dp"
+            android:textColor="@color/white"
+            android:layout_marginBottom="10dp"
+            android:layout_gravity="center"
+            android:id="@+id/btn_upload"/>
+
+
+
+        <EditText
+            android:id="@+id/firstname"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="10dp"
+            android:background="@color/input_register_bg"
+            android:hint="FirstName .."
+            android:padding="10dp"
+            android:singleLine="true"
+            android:inputType="textCapWords"
+            android:textColor="@color/input_register"
+            android:textColorHint="@color/input_register_hint" />
+
+        <EditText
+            android:id="@+id/lastname"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="10dp"
+            android:background="@color/input_register_bg"
+            android:hint="LastName.."
+            android:inputType="textEmailAddress"
+            android:padding="10dp"
+            android:singleLine="true"
+            android:textColor="@color/input_register"
+            android:textColorHint="@color/input_register_hint" />
+
+        <EditText
+            android:id="@+id/address"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="10dp"
+            android:background="@color/input_register_bg"
+            android:hint="Adress..."
+            android:padding="10dp"
+            android:singleLine="true"
+            android:textColor="@color/input_register"
+            android:textColorHint="@color/input_register_hint" />
+        <EditText
+            android:id="@+id/community_name"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="10dp"
+            android:background="@color/input_register_bg"
+            android:hint="Community"
+            android:padding="10dp"
+            android:singleLine="true"
+            android:textColor="@color/input_register"
+            android:textColorHint="@color/input_register_hint" />
+        <!-- Login Button -->
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="10dp"
+            android:layout_marginTop="10dp"
+            android:textColor="@color/white"
+            android:text="PROFESTION"/>
+
+        <com.infantstudio.community.Spinner.SearchableSpinnerProfestion
+            android:id="@+id/profestion_spinner"
+            android:layout_width="100dp"
+            android:layout_height="wrap_content"
+            android:entries="@array/profestion"
+            app:hintTextCountry="Select"/>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+           android:textColor="@color/white"
+            android:layout_marginBottom="10dp"
+            android:text="COUNTRY"/>
+
+        <com.infantstudio.community.Spinner.SearchableSpinnerCountry
+            android:id="@+id/spinner1"
+            android:layout_width="100dp"
+            android:layout_height="wrap_content"
+            android:entries="@array/country"
+            app:hintTextCountry="Select"/>
+
+
+
+
+
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:textColor="@color/white"
+           android:layout_marginBottom="10dp"
+            android:text="STATE"/>
+
+        <com.infantstudio.community.Spinner.SearchableSpinnerState
+            android:id="@+id/spinner2"
+            android:layout_width="100dp"
+            android:layout_height="wrap_content"
+            android:entries="@array/state"
+            app:hintTextState="Select"/>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textColor="@color/white"
+            android:layout_marginTop="10dp"
+            android:layout_marginBottom="10dp"
+
+            android:text="CITY"/>
+        <com.infantstudio.community.Spinner.SearchableSpinnerCity
+            android:id="@+id/spinner3"
+            android:layout_width="100dp"
+            android:layout_height="wrap_content"
+            android:entries="@array/city"
+            app:hintTextCity="Select"/>
+
+        <Button
+            android:id="@+id/submit"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dip"
+            android:background="#ea4c88"
+            android:layout_marginBottom="40dp"
+            android:text="@string/btn_register"
+            android:textColor="@color/white" />
+
+        <!-- Link to Login Screen -->
+
+        <!--<Button-->
+            <!--android:id="@+id/btnLinkToLoginScreen"-->
+            <!--android:layout_width="fill_parent"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:layout_marginTop="40dip"-->
+            <!--android:background="@null"-->
+            <!--android:text="@string/btn_link_to_login"-->
+            <!--android:textAllCaps="false"-->
+            <!--android:textColor="@color/white"-->
+            <!--android:textSize="15dp" />-->
+    </LinearLayout>
+
+    </ScrollView>

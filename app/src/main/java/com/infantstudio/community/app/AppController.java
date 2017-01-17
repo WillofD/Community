@@ -18,6 +18,7 @@ public class AppController extends Application {
 	private ImageLoader mImageLoader;
 	LruBitmapCache mLruBitmapCache;
 
+
 	private static AppController mInstance;
 
 	@Override

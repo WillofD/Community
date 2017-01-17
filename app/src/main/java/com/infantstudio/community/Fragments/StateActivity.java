@@ -57,10 +57,10 @@ public class StateActivity extends Fragment {
         recyclerView.setLayoutManager(new LinearLayoutManager(getActivity()));
 
         //Grid View
-        // recyclerView.setLayoutManager(new GridLayoutManager(this,2,1,false));
+        // recyclerView.setLayoutManager(newlogo GridLayoutManager(this,2,1,false));
 
         //StaggeredGridView
-        // recyclerView.setLayoutManager(new StaggeredGridLayoutManager(2,1));
+        // recyclerView.setLayoutManager(newlogo StaggeredGridLayoutManager(2,1));
 
         // create an Object for Adapter
         mAdapter = new StateDataAdapter(os_versions);
