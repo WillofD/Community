@@ -3,13 +3,13 @@ package com.infantstudio.community.Countrylist;
 import android.app.ProgressDialog;
 import android.content.Context;
 import android.content.Intent;
+import android.database.CharArrayBuffer;
 import android.support.design.widget.Snackbar;
 import android.os.Bundle;
 import android.support.v4.widget.SwipeRefreshLayout;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.widget.AdapterView;
-import android.widget.FrameLayout;
 import android.widget.ListView;
 import android.widget.TextView;
 
@@ -19,8 +19,8 @@ import com.android.volley.Response;
 import com.android.volley.VolleyError;
 import com.android.volley.VolleyLog;
 import com.android.volley.toolbox.JsonObjectRequest;
-import com.infantstudio.community.app.AppController;
 import com.infantstudio.community.DisplayUser;
+import com.infantstudio.community.app.AppController;
 import com.infantstudio.community.MainActivity;
 import com.infantstudio.community.R;
 
@@ -44,6 +44,9 @@ public class FragmentCountryList  extends AppCompatActivity implements SwipeRefr
     private FragmentCountryListAdapater listAdapter;
     private List<FragmentCountryListFeedItem> feedItemschurchnews;
 
+
+    private String uniq_id;
+    ArrayList<String> stringArray = new ArrayList<String>();
      public  JSONArray feedArray;
     private SwipeRefreshLayout swipeRefreshLayout;
     private ProgressDialog mProgressDialog;
@@ -60,7 +63,6 @@ public class FragmentCountryList  extends AppCompatActivity implements SwipeRefr
        // Countrylayout = (FrameLayout) findViewById(R.id.country_list_layout_id);
         Intent intent1 = getIntent();
         mProgressDialog = new ProgressDialog(this);
-
 
 
         swipeRefreshLayout = (SwipeRefreshLayout) findViewById(R.id.swipe_refresh_layout);
@@ -98,16 +100,19 @@ public class FragmentCountryList  extends AppCompatActivity implements SwipeRefr
             @Override
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
 
-                if(position == 1){
+
+                TextView c = (TextView) view.findViewById(R.id.person_id);
+                String idfromtextview = c.getText().toString().trim();
 
                   Intent testIntent = new Intent(FragmentCountryList.this, DisplayUser.class);
+                  testIntent.putExtra("txtpersonid",idfromtextview);
                     startActivity(testIntent);
                     //Toast.makeText(getApplicationContext(), ((TextView) view).getText(),
                             //Toast.LENGTH_SHORT).show();
-                    TextView c = (TextView) view.findViewById(R.id.news_title);
-                    String a = c.toString().trim();
 
-                }
+
+
+
             }
         });
 
@@ -160,17 +165,23 @@ public class FragmentCountryList  extends AppCompatActivity implements SwipeRefr
             if(feedArray != null && feedArray.length() > 0 ) {
 
                 for (int i = 0; i < feedArray.length(); i++) {
+                    int count = 1;
                     JSONObject feedObj = (JSONObject) feedArray.get(i);
 
                     FragmentCountryListFeedItem item = new FragmentCountryListFeedItem();
 //
-                    String id = feedObj.getString("name");
-                    item.setNews_title(id);
-                    System.out.println("kaaaaaaaaaaaaaaaaaa"+""+id);
+                    String name= feedObj.getString("name");
+                    uniq_id = feedObj.getString("person_id");
+                    stringArray.add(uniq_id.toString());
+                    item.setNews_title(name);
+                    item.setPerson_id(uniq_id);
+                    System.out.println("kaaaaaaaaaaaaaaaaaa"+""+stringArray);
 //                    item.setNews_details(feedObj.getString("person_id"));//news_details
 
 
                     feedItemschurchnews.add(item);
+                    count++;
+                    System.out.println("jaaaaaaaaa"+count);
                 }
 
                 swipeRefreshLayout.setRefreshing(false);

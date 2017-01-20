@@ -12,5 +12,7 @@
     <declare-styleable name="SearchableSpinnerProfestion">
         <attr name="hintTextProfestion" format="string"/>
     </declare-styleable>
-
+    <declare-styleable name="SearchableSpinnerCommunity">
+        <attr name="hintTextCommunity" format="string"/>
+    </declare-styleable>
 </resources>

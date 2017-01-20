@@ -1,6 +1,7 @@
 package com.infantstudio.community;
 
 import android.app.Activity;
+import android.app.ProgressDialog;
 import android.content.DialogInterface;
 import android.content.Intent;
 import android.graphics.Bitmap;
@@ -38,10 +39,11 @@ public  class Adddata extends AppCompatActivity {
     EditText fname,lname,address,community_name,profession,city,state,country;
     public TextView result;
     Button submit;
+    private ProgressDialog mProgressDialog;
     String f,l,a,c,p,ci,s,co,encodedImage;
     public static final int PICK_IMAGE = 100;
     public String spinner_value,spinner_value_state,spinner_value_city;
-    public static String valueCountry,valueState,valueCity,valuePro;
+    public static String valueCountry,valueState,valueCity,valuePro,valueComm;
 
 
     public static void setValueCo(String value) {
@@ -61,6 +63,10 @@ public  class Adddata extends AppCompatActivity {
         valuePro = value;
     }
 
+
+    public static void setValueComm(String value) {
+        valueComm = value;
+    }
 
     Spinner spinner;
     Spinner spinnerCity;
@@ -121,7 +127,7 @@ public  class Adddata extends AppCompatActivity {
         fname = (EditText) findViewById(R.id.firstname);
         lname = (EditText) findViewById(R.id.lastname);
         address = (EditText) findViewById(R.id.address);
-        community_name = (EditText) findViewById(R.id.community_name);
+        //community_name = (EditText) findViewById(R.id.community_name);
        // profession = (EditText) findViewById(R.id.profession);
        // city = (EditText) findViewById(R.id.city);
        // state = (EditText) findViewById(R.id.state);
@@ -129,6 +135,7 @@ public  class Adddata extends AppCompatActivity {
         result = (TextView) findViewById(R.id.result);
         submit = (Button) findViewById(R.id.submit);
         Button btn = (Button) findViewById(R.id.btn_upload);
+        mProgressDialog = new ProgressDialog(this);
        // spinner =(Spinner)findViewById(R.id.spinner1);
         //spinnerState =(Spinner)findViewById(R.id.spinner2);
        // spinnerCity =(Spinner)findViewById(R.id.spinner3);
@@ -224,16 +231,22 @@ public  class Adddata extends AppCompatActivity {
         submit.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+                mProgressDialog.setProgressStyle(ProgressDialog.STYLE_SPINNER);
+                mProgressDialog.setMessage("Rigistering Please wait..");
+                mProgressDialog.show();
+                mProgressDialog.setCanceledOnTouchOutside(false);
                 f=fname.getText().toString();
                 l=lname.getText().toString();
                 a=address.getText().toString();
-                c=community_name.getText().toString();
+               // c=community_name.getText().toString();
                 System.out.println("jogiiiiiiiiiiiiiiiiii"+valuePro);
              //   p=profession.getText().toString();
               //  s=state.getText().toString();
               //  co=country.getText().toString();
-                new JSONTaskCountry().execute("http://52.89.46.93/communityApp/?methodName=add.person&name="+f+"&last_name="+l+"&address="+a+"&community_name="+c+"&profession="+valuePro+"&city="+valueCity+"&state="+valueState+"&country="+valueCountry+"&member_in_house=&image="+encodedImage);
-            }
+                new JSONTaskCountry().execute("http://52.89.46.93/communityApp/?methodName=add.person&name="+f+"&last_name="+l+"&address="+a+"&community_name="+valueComm+"&profession="+valuePro+"&city="+valueCity+"&state="+valueState+"&country="+valueCountry+"&member_in_house=&image="+encodedImage);
+
+
+        }
         });
 
 
@@ -272,6 +285,8 @@ public  class Adddata extends AppCompatActivity {
 
         @Override
         protected String doInBackground(String... urls) {
+
+
             HttpURLConnection connection = null;
             BufferedReader reader = null;
             try {
@@ -300,13 +315,20 @@ public  class Adddata extends AppCompatActivity {
                 } catch (IOException e) {
                     e.printStackTrace();
                 }
+
+
             }
+
+
             return null;
+
+
         }
 
         @Override
         protected void onPostExecute(String s) {
             super.onPostExecute(s);
+
             if(fname.getText().toString().trim().equals("")){
                 fname.setText("Field mandatory!");
             }
@@ -323,6 +345,8 @@ public  class Adddata extends AppCompatActivity {
 
             }
             else {
+                System.out.println("ganggggggggg");
+                mProgressDialog.dismiss();
                 AlertDialog.Builder alertDialogBuilder = new AlertDialog.Builder(Adddata.this);
 
                 final TextView et = new TextView(Adddata.this);
@@ -340,13 +364,20 @@ public  class Adddata extends AppCompatActivity {
                     }
                 });
 
+
+
                 // create alert dialog
                 AlertDialog alertDialog = alertDialogBuilder.create();
                 // show it
                 alertDialog.show();
             }
 
+
+
+
         }
+
+
     }
 
 

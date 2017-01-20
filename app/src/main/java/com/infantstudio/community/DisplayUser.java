@@ -18,10 +18,12 @@ import com.android.volley.toolbox.Volley;
 import org.json.JSONArray;
 import org.json.JSONException;
 import org.json.JSONObject;
+import org.w3c.dom.Text;
 
 public class DisplayUser extends AppCompatActivity {
 
-    private TextView textViewResult;
+
+    private TextView nametxt,lastnametxt,addrestxt,communitytxt,professiontxt,citytxt,statetxt,countrytxt;
 
     private ProgressDialog loading;
 
@@ -29,12 +31,28 @@ public class DisplayUser extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_display_user);
-        textViewResult = (TextView) findViewById(R.id.check_data_id); // in this text view i will display the text
+         // in this text view i will display the text
+
+
+
+        String txtid = getIntent().getStringExtra("txtpersonid");
 
         loading = ProgressDialog.show(this,"Please wait...","Fetching...",false,false);
 
+        nametxt = (TextView) findViewById(R.id.person_name_id);
+        lastnametxt = (TextView) findViewById(R.id.person_lastname_id);
+        addrestxt = (TextView) findViewById(R.id.person_adress_id);
+        communitytxt = (TextView) findViewById(R.id.person_community_id);
+        professiontxt = (TextView)findViewById(R.id.person_profesion_id);
+        citytxt = (TextView)findViewById(R.id.person_city_id);
+        statetxt = (TextView)findViewById(R.id.person_state_id);
+        countrytxt = (TextView)findViewById(R.id.person_country_id);
 
-        String url = statics_demo.USER_URL+"4";// this is fixed url where i am getting the data
+
+
+
+
+        String url = statics_demo.USER_URL+txtid;// this is fixed url where i am getting the data
         StringRequest stringRequest = new StringRequest(url, new Response.Listener<String>() {
             @Override
             public void onResponse(String response) {
@@ -58,11 +76,38 @@ public class DisplayUser extends AppCompatActivity {
         String info="";
         try {
             JSONObject jsonObject = new JSONObject(response);
-             info = jsonObject.getString(statics_demo.RESPONSE_INFO);
+
+            JSONObject resopnseObject = jsonObject.getJSONObject("responseMsg");
+            String name = resopnseObject.getString("name");
+            String lastname = resopnseObject.getString("last_name");
+            String address = resopnseObject.getString("address");
+            String community = resopnseObject.getString("community_name");
+            String profestion = resopnseObject.getString("profession");
+            String city = resopnseObject.getString("city");
+            String State = resopnseObject.getString("state");
+            String country = resopnseObject.getString("country");
+           String imageex = resopnseObject.getString("image");
+
+            System.out.println("BASE644444444444"+imageex);
+
+
+            nametxt.setText("Name: "+name);
+            lastnametxt.setText("lastname: "+lastname);
+            addrestxt.setText("Address: "+address);
+            communitytxt.setText("Community: "+community);
+            professiontxt.setText("Profestion: "+profestion);
+            citytxt.setText("City: "+city);
+            statetxt.setText("State: "+State);
+            countrytxt.setText("Country: "+country);
+
+
+//            System.out.println("hasssssssssssssssss"+name);
+
+
         } catch (JSONException e) {
             e.printStackTrace();
         }
-        textViewResult.setText("Name:\t"+info);
+
     }
 
 }

@@ -5,19 +5,34 @@ package com.infantstudio.community.Countrylist;
  */
 public class FragmentCountryListFeedItem {
 
-    private String news_title,news_details,news_image;
+    private String news_title;
+    private String news_details;
+    private String news_image;
+
+    private String person_id;
+
+    public String getPerson_id() {
+        return person_id;
+    }
+
+    public void setPerson_id(String person_id) {
+        this.person_id = person_id;
+    }
+
+
 
 
     public FragmentCountryListFeedItem(){
 
 
     }
-    public FragmentCountryListFeedItem(String news_title, String news_details, String news_image) {
+    public FragmentCountryListFeedItem(String news_title, String news_details, String news_image,String person_id) {
 
         super();
         this.news_title = news_title;
         this.news_details = news_details;
         this.news_image = news_image;
+        this.person_id = person_id;
     }
 
     public String getNews_title() {

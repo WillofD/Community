@@ -1,0 +1,14 @@
+<resources>
+
+
+    <string-array name="community">
+
+        <item>Community1</item>
+        <item>Community2</item>
+        <item>Community3</item>
+        <item>Community4</item>
+
+
+
+    </string-array>
+</resources>

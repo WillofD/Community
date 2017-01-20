@@ -36,9 +36,9 @@ public class SearchCommunity extends AppCompatActivity {
         listView= (ListView) findViewById(R.id.listView);
         postArrayList=new ArrayList<>();
         postArrayList.add(new SearchCountryPojo("Community1"));
-        postArrayList.add(new SearchCountryPojo("test"));
         postArrayList.add(new SearchCountryPojo("Community2"));
         postArrayList.add(new SearchCountryPojo("Community3"));
+        postArrayList.add(new SearchCountryPojo("Community4"));
 
 
         myAppAdapter=new MyAppAdapter(postArrayList,SearchCommunity.this);

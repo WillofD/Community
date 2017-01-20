@@ -8,6 +8,7 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageButton;
 
+import com.infantstudio.community.Countrylist.FragmentCountryList;
 import com.infantstudio.community.Lists.SearchCity;
 import com.infantstudio.community.Lists.SearchCommunity;
 import com.infantstudio.community.Lists.SearchCountry;
@@ -68,7 +69,7 @@ public class SearchMain extends Fragment implements View.OnClickListener {
                 startActivity(new Intent(getActivity(),SearchProfestion.class));
                 break;
             case R.id.logo6:
-
+                startActivity(new Intent(getActivity(),FragmentCountryList.class));
 
               //  startActivity(newlogo Intent(getActivity(),Adddata.class));
                 break;

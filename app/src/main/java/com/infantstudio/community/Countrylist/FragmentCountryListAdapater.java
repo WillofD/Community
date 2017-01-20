@@ -57,10 +57,11 @@ public class FragmentCountryListAdapater extends BaseAdapter {
         if (convertView == null)
             convertView = inflater.inflate(R.layout.countrylistfeeditem, null);
 
-        if (imageLoader == null)
-            imageLoader = AppController.getInstance().getImageLoader();
+//        if (imageLoader == null)
+//            imageLoader = AppController.getInstance().getImageLoader();
 
         TextView newstitle = (TextView) convertView.findViewById(R.id.news_title);
+        TextView Personid = (TextView) convertView.findViewById(R.id.person_id);
 //        TextView timestamp = (TextView) convertView
 //                .findViewById(R.id.timestamp);
 //        TextView newdetails = (TextView) convertView
@@ -77,6 +78,9 @@ public class FragmentCountryListAdapater extends BaseAdapter {
 
         String m =newstitle.getText().toString().trim();
         System.out.println("ema"+m);
+
+        Personid.setText(item.getPerson_id());
+
 
 
 
@@ -95,22 +99,22 @@ public class FragmentCountryListAdapater extends BaseAdapter {
 //            newdetails.setVisibility(View.GONE);
 //        }
 
-        if (item.getNews_image() != null) {
-            feedImageView.setImageUrl(item.getNews_image(), imageLoader);
-            feedImageView.setVisibility(View.VISIBLE);
-            feedImageView
-                    .setResponseObserver(new ChurchNewsFeedImageView.ResponseObserver() {
-                        @Override
-                        public void onError() {
-                        }
-
-                        @Override
-                        public void onSuccess() {
-                        }
-                    });
-        } else {
-            feedImageView.setVisibility(View.GONE);
-        }
+//        if (item.getNews_image() != null) {
+//            feedImageView.setImageUrl(item.getNews_image(), imageLoader);
+//            feedImageView.setVisibility(View.VISIBLE);
+//            feedImageView
+//                    .setResponseObserver(new ChurchNewsFeedImageView.ResponseObserver() {
+//                        @Override
+//                        public void onError() {
+//                        }
+//
+//                        @Override
+//                        public void onSuccess() {
+//                        }
+//                    });
+//        } else {
+//            feedImageView.setVisibility(View.GONE);
+//        }
 
         return convertView;
     }

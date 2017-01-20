@@ -5,7 +5,8 @@ package com.infantstudio.community;
  */
 public  class statics_demo {
 
-    public static String URL_COUNTRY ;
+    public static String URL_COUNTRY  ;
+    public static String URL_PERSON;
     public  static String URL_STATE;
     public  static String URL_CITY;
     public  static String URL_PROFESTION;
@@ -13,8 +14,8 @@ public  class statics_demo {
 
 
 
-    public static final String USER_URL = "http://52.89.46.93/communityApp/?methodName=delete.person&person_id=";
-    public static final String RESPONSE_INFO ="responseInfo";
+    public static final String USER_URL = "http://52.89.46.93/communityApp/?methodName=get.person&person_id=";
+    public static final String RESPONSE_INFO ="name";
 
 
 }

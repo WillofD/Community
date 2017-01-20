@@ -21,7 +21,11 @@
             android:layout_height="wrap_content"
             android:orientation="horizontal"
             android:paddingLeft="15dp"
+            android:layout_gravity="left"
             android:paddingRight="15dp" >
+
+
+
 
             <!--<com.android.volley.toolbox.NetworkImageView-->
                 <!--android:id="@+id/profilePic"-->
@@ -31,18 +35,32 @@
             <!--</com.android.volley.toolbox.NetworkImageView>-->
 
             <LinearLayout
-                android:layout_width="fill_parent"
+                android:layout_width="100dp"
                 android:layout_height="wrap_content"
                 android:orientation="vertical"
                 android:paddingLeft="10dp" >
 
                 <TextView
                     android:id="@+id/news_title"
-                    android:layout_width="fill_parent"
+                    android:layout_width="100dp"
                     android:layout_height="wrap_content"
                     android:textSize="15dp"
+
+                    android:text="hi how are u"
                     android:textStyle="bold" />
 
+                <RelativeLayout
+                    android:layout_width="0dp"
+                    android:layout_height="0dp">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/person_id"
+                        android:textSize="0dp"
+                        />
+
+                </RelativeLayout>
                 <!--<TextView-->
                     <!--android:id="@+id/timestamp"-->
                     <!--android:layout_width="fill_parent"-->
@@ -71,13 +89,13 @@
             <!--android:paddingRight="@dimen/feed_item_status_pad_left_right"-->
             <!--android:textColorLink="@color/link" />-->
 
-        <com.infantstudio.community.ChurchNewsFeedImageView
-            android:id="@+id/news_feedImage"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:background="@color/white"
-            android:scaleType="fitXY"
-            android:visibility="visible" />
+        <!--<com.infantstudio.community.ChurchNewsFeedImageView-->
+            <!--android:id="@+id/news_feedImage"-->
+            <!--android:layout_width="match_parent"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:background="@color/white"-->
+            <!--android:scaleType="fitXY"-->
+            <!--android:visibility="visible" />-->
 
 
 

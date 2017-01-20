@@ -61,7 +61,10 @@
             android:theme="@style/Base.Theme.AppCompat.Light.DarkActionBar" />
         <activity android:name=".SearchMain"></activity><![CDATA[
         />
-    ]]>
+
+
+
+        ]]>
     </application>
 
 </manifest>
