@@ -88,6 +88,8 @@ public class SearchState extends AppCompatActivity {
                 FragmentCountryList.StateLink(value);
                 Intent openstatelist = new Intent(SearchState.this,FragmentCountryList.class);
 //                opencountrylist.putExtra("StateValue",value);
+
+                System.out.println("aneeeeeeeeeeeeeeeeee"+value);
                 startActivity(openstatelist);
 
 

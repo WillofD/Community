@@ -46,6 +46,7 @@
         <activity
             android:name=".Lists.SearchState"
             android:label="State"
+
             android:theme="@style/Base.Theme.AppCompat.Light.DarkActionBar" />
         <activity
             android:name=".Lists.SearchCity"

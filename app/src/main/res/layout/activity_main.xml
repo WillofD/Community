@@ -22,12 +22,12 @@
         <android.support.design.widget.AppBarLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:background="#FFC107">
+            android:background="#00BCD5">
             <android.support.v7.widget.Toolbar
                 android:id="@+id/toolbar"
                 android:layout_width="match_parent"
                 android:layout_height="?attr/actionBarSize"
-                android:background="#FFC107"
+                android:background="#00BCD5"
                 app:layout_scrollFlags="scroll|enterAlways"
                 app:popupTheme="@style/AppTheme.PopupOverlay">
 
@@ -38,7 +38,7 @@
                     android:layout_height="wrap_content"
                     android:layout_gravity="center"
                     android:textAppearance="@android:style/TextAppearance.DeviceDefault.Medium"
-                    android:textColor="#212121" />
+                    android:textColor="#F5F5F5" />
 
             </android.support.v7.widget.Toolbar>
 
@@ -47,11 +47,11 @@
             <android.support.design.widget.TabLayout
                 android:id="@+id/tabs"
                 android:layout_width="match_parent"
-                app:tabIndicatorColor="@color/white"
+                app:tabIndicatorColor="#BFC549"
                 style="@style/MyCustomTabLayout"
-                app:tabSelectedTextColor="#212121"
+                app:tabSelectedTextColor="@color/white"
                 android:layout_height="wrap_content"
-                app:tabTextColor="#757575"
+                app:tabTextColor="#99f3ff"
                 app:tabGravity="fill"
                 app:tabMode="scrollable"
                 android:fillViewport="false" />

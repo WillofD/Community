@@ -94,7 +94,7 @@ public class MainActivity extends AppCompatActivity  implements ItemFragment.OnL
         getSupportActionBar().setDisplayShowTitleEnabled(false);
         getSupportActionBar().setDisplayHomeAsUpEnabled(false);
         getSupportActionBar().setHomeButtonEnabled(false);
-        toolbar.setNavigationIcon(R.drawable.blackdraw);
+        toolbar.setNavigationIcon(R.drawable.hum1);
 
 
         drawerLayout = (DrawerLayout) findViewById(R.id.drawer_layout);

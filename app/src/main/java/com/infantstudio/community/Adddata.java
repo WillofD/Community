@@ -132,7 +132,7 @@ public  class Adddata extends AppCompatActivity {
        // city = (EditText) findViewById(R.id.city);
        // state = (EditText) findViewById(R.id.state);
        // country = (EditText) findViewById(R.id.country);
-        result = (TextView) findViewById(R.id.result);
+        //result = (TextView) findViewById(R.id.result);
         submit = (Button) findViewById(R.id.submit);
         Button btn = (Button) findViewById(R.id.btn_upload);
         mProgressDialog = new ProgressDialog(this);
